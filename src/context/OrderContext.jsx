@@ -16,11 +16,11 @@ export const OrderProvider = ({ children }) => {
     const fetchOrders = async () => {
       try {
         
-        const tokenRes = await getToken(
-          "E0123025",
-          "720619",
-          "orders"
-        );
+        const tokenRes = await getToken({
+          studentId:"E0123025",
+          password:"720619",
+          set:"setA",
+        });
 
         const orders = await getDataset(
           tokenRes.token,
